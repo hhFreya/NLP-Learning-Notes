@@ -1,0 +1,9 @@
+第一次用github写笔记表示非常迷茫，需要一点时间探索orz
+（ddl逼死人系列）
+
+Stanford CS224N 第一堂课视频停下来比较迷茫，感觉没讲很多东西进度有点慢，不如直接看notes舒服
+
+关键点记录
+1. one-hot向量易于构造，但因为其正交性，无法提现词向量间的相似度
+2.主要模型 CBOW, Skip-gram
+3.主要知识点（details): negative sampling, Hierarchical Softmax
