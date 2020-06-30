@@ -1,0 +1,31 @@
+1. 字母级，拆词
+2. LSTM seq2seq model
+3. 在捷克语这样的复杂语言中，字符级模型的效果提升较为明显，但是在英语和法语等语言中则收效甚微。
+模型较小时，word-level 更佳；模型较大时，character-level 更佳
+4. a) 与word级模型相同的架构 但是使用更小的单元:“word pieces”
+b) 混合架构 主模型使用单词，其他使用字符级
+5. Wordpiece/Sentencepiece model
+
+谷歌NMT (GNMT) 使用了它的一个变体
+V1: wordpiece model
+V2: sentencepiece model
+不使用字符的 n-gram count，而是使用贪心近似来最大化语言模型的对数似然函数值，选择对应的pieces
+
+添加最大限度地减少困惑的n-gram
+Wordpiece模型标记内部单词
+
+Sentencepiece模型使用原始文本
+
+空格被保留为特殊标记(_)，并正常分组
+
+BERT 使用了 wordpiece 模型的一个变体
+
+(相对)在词汇表中的常用词
+e.g: at, fairfax, 1910s
+其他单词由wordpieces组成
+e.g： hypatia = h ##yp ##ati ##a
+
+6. Character-based LSTM
+7.字符级的 CNNs + Highway Network 可以提取丰富的语义和结构信息（building blocks)
+
+Todo: 这一期其实听的比较迷茫，感觉没有完全理解，期待看到大大们的笔记和拓展了。
