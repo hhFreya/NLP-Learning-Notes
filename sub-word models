@@ -28,4 +28,4 @@ e.g： hypatia = h ##yp ##ati ##a
 6. Character-based LSTM
 7.字符级的 CNNs + Highway Network 可以提取丰富的语义和结构信息（building blocks)
 
-Todo: 这一期其实听的比较迷茫，感觉没有完全理解，期待看到大大们的笔记和拓展了。
+Todo: 这一期其实听的比较迷茫，感觉没有完全理解，期待看到大大们的笔记和拓展了。 FastText参考 https://zhuanlan.zhihu.com/p/32965521
