@@ -31,3 +31,5 @@ Self Attention
 4. multi-head attention则是通过h个不同的线性变换对Q，K，V进行投影，最后将不同的attention结果拼接起来
 
 5.Bert state of the art
+
+To be continued
