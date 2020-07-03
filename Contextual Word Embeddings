@@ -1,0 +1,33 @@
+重点：Attention, transformer, Bert
+
+1. Attention核心思想
+在decoding阶段对input中的信息赋予不同权重。在nlp中就是针对sequence的每个time step input，在cv中就是针对每个pixel。
+
+2.Soft/Hard Attention
+
+soft attention：传统attention，可被嵌入到模型中去进行训练并传播梯度
+
+hard attention：不计算所有输出，依据概率对encoder的输出采样，在反向传播时需采用蒙特卡洛进行梯度估计
+
+ Global/Local Attention
+
+global attention：传统attention，对所有encoder输出进行计算
+
+local attention：介于soft和hard之间，会预测一个位置并选取一个窗口进行计算
+
+Self Attention
+
+传统attention是计算Q和K之间的依赖关系，而self attention则分别计算Q和K自身的依赖关系。
+
+3.优点：
+
+在输出序列与输入序列“顺序”不同的情况下表现较好，如翻译、阅读理解
+相比RNN可以编码更长的序列信息
+缺点：
+
+对序列顺序不敏感
+通常和RNN结合使用，不能并行化
+
+4. multi-head attention则是通过h个不同的线性变换对Q，K，V进行投影，最后将不同的attention结果拼接起来
+
+5.Bert state of the art
